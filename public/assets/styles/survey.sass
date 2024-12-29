@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap')
+
+body
+    height: 100vh
+
+.container
+    position: relative
+    width: 50%
+    height: 100vh
+    padding: 50px
+    @media screen and (max-width: 500px)
+        padding: 2px 20px
+    .progress
+        width: 100%
+        background-color: #F1F0F0
+        border-radius: 999px
+        position: absolute
+        bottom: 50px
+        transition: width 0.15s ease-in-out
+        .is-active
+            background-color: #0445E4
+            color: #fff
+            padding: 3px 10px
+            height: 100%
+            font-size: 14px
+            text-align: center
+            display: inline-block
+            border-radius: 999px
+h1
+    font-size: clamp(2rem, 10.5vw, 4.5rem)
+    color: #0445E4
+    margin: 0
+    font-weight: 600
+    font-family: "Inter", sans-serif
+h2
+    font-size: clamp(2.5rem, 10.5vw, 5rem)
+    color: #4A5F77
+    margin: 0
+    font-weight: 600
+    font-family: "Inter", sans-serif
+h4
+    font-size: 20px
+    color: #000000
+    margin: 20px 0 0 0
+    padding: 0
+    font-weight: 600
+    font-family: "Inter", sans-serif
+
+label
+    display: flex
+    flex-direction: column
+    span
+        font-size: 15px
+        color: #4A5F77
+        font-weight: 500
+    textarea
+        width: 100%
+        padding: 15px
+        margin: 5px 0
+        box-sizing: border-box
+        border: 2px solid #ccc
+        border-radius: 4px
+        font-size: 16px
+        resize: vertical
+        max-height: 400px
+        min-height: 200px
+        transition: border-color 0.3s
+        font-family: "Inter", sans-serif
+        color: #596069
+        &:focus
+            border-color: #007bff
+            outline: none
+            color: #000000
+.btns
+    display: inline-flex
+    gap: 10px
+button
+    padding: 15px 30px
+    margin: 10px 0
+    box-sizing: border-box
+    border: 2px solid #aaaaaa
+    border-radius: 4px
+    font-size: 16px
+    cursor: pointer
+    border: none
+    transition: border-color 0.3s, background-color 0.15s
+    background-color: #e0e4ea
+    &.is-next.is-active
+        background-color: #0445E4
+        color: #fff
+    &.is-next:not(.is-active)
+        cursor: default
+        pointer-events: none
+    &:hover
+        &.is-prev
+            background-color: #cccfd4
+        &.is-next.is-active
+            background-color: #0048ff
+
+.question
+    padding: 15px
+    border-left: 5px solid #0445E4
+    margin: 10px 0
