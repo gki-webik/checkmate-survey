@@ -16,15 +16,16 @@ body
         border-radius: 999px
         position: absolute
         bottom: 50px
-        transition: width 0.15s ease-in-out
         .is-active
             background-color: #0445E4
             color: #fff
-            padding: 3px 10px
+            padding: 3px 0
+            min-width: 35px
             height: 100%
             font-size: 14px
             text-align: center
             display: inline-block
+            transition: width 0.15s ease-in-out
             border-radius: 999px
 h1
     font-size: clamp(2rem, 10.5vw, 4.5rem)

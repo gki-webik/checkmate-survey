@@ -11,19 +11,10 @@
         <textarea v-model="questions[currentQuestion - 1].answer"></textarea>
       </label>
       <div class="btns">
-        <button
-          class="is-prev"
-          @click="currentQuestion > 0 && currentQuestion--"
-        >
-          Назад
-        </button>
+        <button class="is-prev" @click="prevStep">Назад</button>
         <button
           class="is-next"
-          @click="
-            currentQuestion < 10 && answer.trim() != ''
-              ? currentQuestion++
-              : null
-          "
+          @click="nextStep"
           :class="
             questions[currentQuestion - 1].answer.trim() != '' && 'is-active'
           "
@@ -99,8 +90,25 @@ export default {
       ],
       answer: "",
       currentQuestion: 1,
-      progress: 30,
+      progress: 0,
     };
+  },
+  methods: {
+    prevStep() {
+      if (this.currentQuestion > 1) {
+        this.currentQuestion--;
+        this.progress -= 10;
+      }
+    },
+    nextStep() {
+      if (
+        this.currentQuestion < this.questions.length &&
+        this.questions[this.currentQuestion - 1].answer.trim() != ""
+      ) {
+        this.currentQuestion++;
+        this.progress += 10;
+      }
+    },
   },
 };
 </script>
