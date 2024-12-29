@@ -11,7 +11,7 @@
       <form>
         <label>
           <span>Название компании</span>
-          <input type="text" />
+          <input type="text" v-model="name" />
         </label>
         <label>
           <span>Номер телефона</span>
@@ -23,7 +23,8 @@
             placeholder="+7 (___) ___-__-__"
           />
         </label>
-        <button type="submit">Перейти к опросу</button>
+        <button type="button" @click="sendData()">Перейти к опросу</button>
+        <div class="error" v-if="error">{{ error }}</div>
       </form>
     </div>
   </div>
@@ -32,5 +33,26 @@
 @import "@/public/assets/styles/dist/index.css";
 </style>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      name: "",
+      phone: "",
+      error: null,
+    };
+  },
+  methods: {
+    sendData() {
+      if (this.phone.trim() == "" || this.name.trim() == "") {
+        this.error = "Пожалуйста, заполните все поля";
+        return;
+      }
+      if (typeof window !== "undefined" && window.localStorage) {
+        localStorage.setItem("currentName", this.name);
+        localStorage.setItem("currentTelephone", this.phone);
+        this.$router.push("/survey");
+      }
+    },
+  },
+};
 </script>
