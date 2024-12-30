@@ -167,7 +167,7 @@ export default {
         },
       ],
       answer: "",
-      currentQuestion: 100,
+      currentQuestion: 1,
       progress: 0,
     };
   },
@@ -189,7 +189,6 @@ export default {
     },
     nextFinal(e) {
       if (e == "no" || e == "yesTrue") {
-        console.log("de");
         if (e == "yesTrue") {
           const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (!emailPattern.test(this.email)) {
@@ -197,8 +196,7 @@ export default {
             return;
           }
         }
-        this.questions[this.currentQuestion - 2].answer =
-          e == "no" ? "Нет" : "Да";
+        this.questions[10].answer = e == "no" ? "Нет" : "Да";
         fetch("/api/send.php", {
           method: "POST",
           headers: {
@@ -213,17 +211,12 @@ export default {
         })
           .then((response) => response.json())
           .then((data) => {
-            if (data.success) {
-              alert("Спасибо за ваш ответ. Ваша заявка отправлена.");
-            } else {
-              alert("Ошибка при отправке данных.");
-            }
+            this.currentQuestion = 100;
           })
           .catch((error) => {
             console.error("Error:", error);
             alert("Ошибка при отправке данных.");
           });
-        console.log("dee");
       } else if (e == "yes") {
         this.currentQuestion++;
       }

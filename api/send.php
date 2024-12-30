@@ -1,16 +1,13 @@
 <?php
-try {
-    $pdo = new PDO('sqlite:checkmate_db.sqlite');
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$dbo = 'mysql:host=localhost;dbname=webik;charset=utf8mb4';
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES => false,
+];
 
-$pdo->exec("CREATE TABLE IF NOT EXISTS answers (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name VARCHAR NOT NULL,
-        telephone VARCHAR NOT NULL UNIQUE,
-        email VARCHAR NOT NULL UNIQUE,
-        data TEXT NOT NULL,
-        date VARCHAR NOT NULL
-    )");
+try {
+    $pdo = new PDO($dbo, 'root', "W0qdqPwl4QcVhNtT", $options);
 
     $input = file_get_contents('php://input');
     $data = json_decode($input, true);
