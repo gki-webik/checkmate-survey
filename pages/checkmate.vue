@@ -99,7 +99,6 @@
     <div class="block5">
       <div class="top">
         <div class="square is-1"></div>
-        <div class="square is-2"></div>
         <h2>Преимущества платформы</h2>
       </div>
       <div class="center">
@@ -144,6 +143,119 @@
         </div>
       </div>
       <div class="circle is-1"></div>
+    </div>
+    <div class="block6">
+      <div class="circle is-1"></div>
+      <div class="left">
+        <h2>Функции для бизнеса и тайных покупателей</h2>
+        <div class="text">
+          <span>01</span>
+          <p>
+            Для бизнеса доступна учетная запись компании, ИИ генерация заданий и
+            чеклистов, отчетность и аналитика, что помогает в контроле и
+            улучшении сервиса.
+          </p>
+        </div>
+        <div class="text">
+          <span>02</span>
+          <p>
+            Тайные покупатели имеют личный кабинет с заданиями, историю
+            выполненных задач, а также систему рейтинга и отзывов.
+          </p>
+        </div>
+        <div class="square"></div>
+      </div>
+      <img src="@/public/assets/media/3.png" alt="img" />
+    </div>
+    <div class="block7">
+      <div class="square is-1"></div>
+      <div class="square is-2"></div>
+      <div class="left">
+        <div class="left">
+          <h2>Потенциальные клиенты</h2>
+          <h3>Фитнес-клубы и рестораны</h3>
+          <p>
+            Фитнес-клубы и спортивные центры могут использовать платформу для
+            проверки стандартов обслуживания и улучшения клиентского сервиса
+          </p>
+          <h3>Розничные магазины и автосервисы</h3>
+          <p>
+            Рестораны, розничные магазины и автосервисы могут эффективно
+            оценивать работу персонала и улучшать качество обслуживания.
+          </p>
+        </div>
+      </div>
+      <img src="@/public/assets/media/4.png" alt="img" />
+    </div>
+    <div class="block8">
+      <div class="square is-1"></div>
+      <div class="square is-2"></div>
+      <div class="circle is-1"></div>
+      <div class="circle is-2"></div>
+      <div class="box">
+        <div class="left">
+          <div class="item">
+            <h2>70%</h2>
+            <h3>Монетизация платформы</h3>
+            <h4>Данные компании</h4>
+          </div>
+        </div>
+        <div class="right">
+          <p>
+            Монетизация может быть достигнута через плату за подписку и запросы
+            на тесты, предоставляя бизнесу экономию до 70% на обучении и
+            контроле персонала.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="block9">
+      <div class="circle is-1"></div>
+      <div class="square is-1"></div>
+      <div class="square is-2"></div>
+      <h2>Риски и минимизация</h2>
+      <div class="items">
+        <div class="item">
+          <div class="circle is-active"></div>
+          <p>
+            Одним из рисков является недоверие со стороны бизнеса, что можно
+            минимизировать предоставлением пробного периода и успешными кейсами.
+          </p>
+        </div>
+        <div class="item">
+          <div class="circle"></div>
+          <p>
+            Конкуренцию с другими платформами можно преодолеть предложением
+            уникальных функций, таких как аналитика и встроенный ИИ конструктор
+            чеклистов.
+          </p>
+        </div>
+        <div class="item">
+          <div class="circle"></div>
+          <p>
+            Отсутствие тайных покупателей можно компенсировать, сделав клиентов
+            бизнеса потенциальными тайными покупателями.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="block10">
+      <div class="square is-1"></div>
+      <div class="square is-2"></div>
+      <div class="circle is-1"></div>
+      <div class="text">
+        <h1>CheckMate: ваш путь к успеху</h1>
+        <p>
+          Платформа CheckMate предлагает уникальное решение для повышения
+          стандартов сервиса в вашем бизнесе. Применяйте тайных покупателей и
+          улучшайте качество обслуживания сегодня.
+        </p>
+      </div>
+      <div class="bottom">
+        <div class="square is-3"></div>
+        <div class="square is-4"></div>
+      </div>
+      <div class="right"></div>
     </div>
   </div>
 </template>

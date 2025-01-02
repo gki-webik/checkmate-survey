@@ -216,6 +216,11 @@ export default {
           .catch((error) => {
             console.error("Error:", error);
             alert("Ошибка при отправке данных.");
+          })
+          .finally(() => {
+            if (e == "yesTrue") {
+              this.$router.replace("/checkmate");
+            }
           });
       } else if (e == "yes") {
         this.currentQuestion++;
