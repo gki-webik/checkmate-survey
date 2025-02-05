@@ -10,8 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@vue/server-renderer": "^3.5.13",
     "nuxt": "^3.15.0",
-    "vue": "latest",
+    "vue": "^3.5.13",
     "vue-router": "latest",
     "vue-the-mask": "^0.11.1"
   }
