@@ -111,7 +111,7 @@ export default {
   methods: {
     async fetch() {
       try {
-        const response = await fetch("https://gki-info.ru/api/list.php");
+        const response = await fetch("/api/list.php");
         if (!response.ok) {
           throw new Error("Ошибка при загрузке данных");
         }

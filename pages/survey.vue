@@ -197,7 +197,13 @@ export default {
           }
         }
         this.questions[10].answer = e == "no" ? "Нет" : "Да";
-        fetch("/api/send.php", {
+
+        this.currentQuestion = 100;
+
+        if (e == "yesTrue") {
+          this.$router.replace("/checkmate");
+        }
+        /*  fetch("/api/send.php", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -221,7 +227,7 @@ export default {
             if (e == "yesTrue") {
               this.$router.replace("/checkmate");
             }
-          });
+          }); */
       } else if (e == "yes") {
         this.currentQuestion++;
       }

@@ -18,7 +18,7 @@ $options = [
 ];
 
 try {
-    $pdo = new PDO($dbo, 'root', "W0qdqPwl4QcVhNtT", $options);
+    $pdo = new PDO($dbo, 'root', "", $options);
 
     $stmt = $pdo->query("SELECT * FROM answers");
     $answers = $stmt->fetchAll();

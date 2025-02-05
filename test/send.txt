@@ -7,7 +7,7 @@ $options = [
 ];
 
 try {
-    $pdo = new PDO($dbo, 'root', "W0qdqPwl4QcVhNtT", $options);
+    $pdo = new PDO($dbo, 'root', "", $options);
 
     $input = file_get_contents('php://input');
     $data = json_decode($input, true);
